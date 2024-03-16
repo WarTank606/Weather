@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-image: url('./assets/3d-rendering-planet-earth.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: 1400px 1400px;
+  background-color: black;
+}

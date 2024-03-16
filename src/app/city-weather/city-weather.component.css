@@ -1,0 +1,36 @@
+/* Site-Wide */
+th {
+  text-align: center;
+}
+
+table {
+  padding-top: 200px;
+}
+Mat-Card {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding-top: 10px;
+}
+/* Site-Wide */
+
+/* Mat-Card-Search-Table */
+  #MatCardSearchTable {
+    margin-bottom: 80px;
+    color: white;
+  }
+  #MatCardSearchTable_Title 
+  {
+    font-size: 3cqb;
+    padding-bottom: 10px;
+  }
+  #MatCardSearchTable_Table 
+  {
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
+    justify-content: center;
+    vertical-align: middle;
+  }
+  #MatCardSearchTable_List:hover {
+    color: black;
+  }
+  /* Mat-Card-Search-Table */

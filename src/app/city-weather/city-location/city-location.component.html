@@ -1,0 +1,24 @@
+<!-- Mat-Card-Search-Bar -->
+<mat-card id="MatCardSearchBar">
+  <form (ngSubmit)="GetCityLocation(WeatherForm)" #WeatherForm="ngForm">
+    <mat-card-content>
+      <div class="form-group">
+        <label for="CityInput" id="MatCardSearchBar_Label">Search a City</label>
+        <input
+          type="test"
+          class="form-control"
+          id="MatCardSearchBar_Input"
+          ngModel
+          name="CityName"
+        />
+      </div>
+      <mat-card-actions id="MatCardSearchBar_Action">
+        <button type="submit" class="btn success" id="MatCardSearchBar_Button">
+          Search for City
+        </button>
+      </mat-card-actions>
+    </mat-card-content>
+  </form>
+</mat-card>
+<br />
+<!-- Mat-Card-Search-Bar -->

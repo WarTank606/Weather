@@ -1,0 +1,61 @@
+
+<div class="col-xs-12">
+
+<!-- Mat-Card-Search-Results -->
+<mat-card id="MatCardSearchResults">
+  <mat-card-header>
+    <mat-card-title id="MatCardSearchResults_Title">
+      Current Forecast
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <table class="table table-hover" id="MatCardSearchResults_Table">
+      <thead>
+        <tr>
+          <th>{{ Date_Time | date:'EEE, MMM. d, yyyy | hh:mm:a' }}</th>
+          <th>
+            <button type="submit" class="btn success" id="SearchBar_Button" (click)="ChangeCity()">
+              Change City: {{ CityName }}, {{ StateName }}, {{ CountryName }}
+            </button>
+          <th>Lat: {{ Latitude | number: '1.0-2' }}, Lon: {{ Longitude | number: '1.0-2' }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr id="MatCardSearchResults_Value">
+          <td id="MatCardSearchResults_Value">
+            <img
+              mat-card-sm-image
+              src={{Weather_Icon}}
+              alt="Responsive image"
+              id="MatCardDescription"
+            />
+            <div>{{ Weather_Description }}</div>
+          </td>
+          <td id="MatCardSearchResults_Current">
+            <div id="MatCardSearchResults_CurrentName">Current:</div>
+            {{ Main_Temperature | number: '1.0-2' }}°C
+            <div id="MatCardSearchResults_CurrentName">
+              Feels Like: {{ Main_Feels_Like | number: '1.0-2' }}°C
+            </div>
+          </td>
+
+          <td id="MatCardSearchResults_Value">
+            Max: {{ Main_Temperature_Max | number: '1.0-2' }}°C
+            <br />
+            Min: {{ Main_Temperature_Min | number: '1.0-2' }}°C
+            <br />
+            Humidity: {{ Main_Humidity | number: '1.0-2' }}%
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </mat-card-content>
+</mat-card>
+<!-- Mat-Card-Search-Results -->
+
+<h1 id = "web" style="padding-top: 5%;">
+  <a href="https://www.freepik.com/free-photo/3d-rendering-planet-earth_44957889.htm#fromView=search&page=1&position=2&uuid=cd17fb40-25f7-49d9-9435-bd32c1544717">Image by freepik</a>
+</h1>
+
+</div>
+

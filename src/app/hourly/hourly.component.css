@@ -1,0 +1,57 @@
+/* Site-Wide */
+th {
+    text-align: center;
+  }
+  
+  table {
+    padding-top: 200px;
+  }
+  Mat-Card {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding-top: 10px;
+  }
+  /* Site-Wide */
+
+/* Mat-Card-Search-Results-Hourly */
+#MatCardSearchResultsHourly
+{
+  color: white;
+  text-align: center;
+  justify-content: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.8cqb;
+  border: 0px;
+}
+#MatCardSearchResultsHourly_Title
+{
+  font-size: 3cqb;
+  padding-bottom: 10px;
+}
+#MatCardSearchResultsHourly_Table
+{
+  font-size: 1.8cqb;
+}
+#MatCardSearchResultsHourly_Temp
+{
+  border: none;
+  cursor: pointer;
+  vertical-align: middle;
+}
+#MatCardSearchResultsHourly_Temp:hover
+{
+color: black;
+font-weight: bold;
+}
+/* Mat-Card-Search-Results-Hourly */
+#web
+{
+    bottom: 5px;
+}
+#SearchBar_Button {
+  font-weight: bold;
+  font-size: 20px;
+  color: rgb(255, 241, 214);
+  background-color: rgba(255, 165, 0, 0.6);
+  border: 2px solid white;
+  margin-bottom: 10%;
+}

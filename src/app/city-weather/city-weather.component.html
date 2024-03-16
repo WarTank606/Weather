@@ -1,0 +1,50 @@
+
+<div class="col-xs-1 col-sm-1 col-md-1 col-lg-3 col-xl-3">
+</div>
+
+<div class="col-xs-12 col-sm-10 col-md-10 col-lg-6 col-xl-6">
+
+<app-city-location (City_Search)="GetCity_Search($event)"></app-city-location>
+
+<!-- Mat-Card-Search-Table -->
+<mat-card id="MatCardSearchTable" *ngIf="SearchCity">
+  <mat-card-header>
+    <mat-card-title id="MatCardSearchTable_Title">
+      Search Results
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <table class="table table-hover" id="MatCardSearchTable_Table">
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>City</th>
+          <th>State</th>
+          <th>Country</th>
+          <th>Latitude</th>
+          <th>Longitude</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="let X of CityLocationData; let i = index"
+          (click)="SelectedCity(i)"
+          id="MatCardSearchTable_List"
+        >
+          <td>{{ i + 1 }}</td>
+          <td>{{ CityLocationData[i].name }}</td>
+          <td>{{ CityLocationData[i].state }}</td>
+          <td>{{ CityLocationData[i].country }}</td>
+          <td>{{ CityLocationData[i].lat | number: '1.0-2'}}</td>
+          <td>{{ CityLocationData[i].lon |  number: '1.0-2'}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </mat-card-content>
+</mat-card>
+<!-- Mat-Card-Search-Table -->
+
+</div>
+
+<div class="col-xs-1 col-sm-1 col-md-1 col-lg-3 col-xl-3">
+</div>

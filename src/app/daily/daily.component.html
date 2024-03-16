@@ -1,0 +1,164 @@
+
+<div class="ChangeCity">
+  <button
+  type="submit"
+  class="btn success"
+  id="SearchBar_Button"
+  (click)="ChangeCity()"
+  >
+  Change City: {{ CityName }} | {{ StateName }} | {{ CountryName }}
+  </button>
+</div>
+
+
+<mat-expansion-panel id="MatExpansionPanel_Title" hideToggle disabled>
+  <mat-expansion-panel-header
+    [collapsedHeight]="'120px'"
+    [expandedHeight]="'300px'"
+  >
+    <mat-panel-description style="border: none">
+      <div>
+        <div
+          id="MatExpansionPanel_Title"
+        >
+          Date
+        </div>
+      </div>
+    </mat-panel-description>
+    <mat-panel-description>
+      <div id="MatExpansionPanel_Title">
+        Temperature
+      </div>
+    </mat-panel-description>
+    <mat-panel-description>
+      <div id="MatExpansionPanel_Title">
+        Weather
+      </div>
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+</mat-expansion-panel>
+
+<div *ngFor="let X of FiveDay; let i = index">
+  <hr />
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header
+      [collapsedHeight]="'120px'"
+      [expandedHeight]="'300px'"
+    >
+      <mat-panel-description style="border: none">
+        <div>
+          <div id="MatExpansionPanel_Dates">
+            {{ Day_Avg_Date[i] | date : "EEEE" }}
+          </div>
+          <div id="MatExpansionPanel_Dates">
+            {{ Day_Avg_Date[i] | date : "MMMM dd" }}
+          </div>
+        </div>
+      </mat-panel-description>
+      <mat-panel-description>
+        <div id="MatExpansionPanel_Average">
+          <div id="MatExpansionPanel_AverageLabel">Average Temperature:</div>
+          <br />
+          {{ Day_Avg_Temperature[i] | number : "1.0-2" }}°C
+          <div id="MatExpansionPanel_AverageLabel">
+            <br />
+            Feels Like: {{ Day_Avg_Feels_Like[i] | number : "1.0-2" }}°C
+          </div>
+        </div>
+      </mat-panel-description>
+      <mat-panel-description>
+        <div id="MatExpansionPanel_Value">
+          Probability of Precipitation:
+          {{ Day_Avg_POP[i] | number : "1.0-2" }}%
+          <br />
+          Wind Speed: {{ Day_Avg_Wind_Speed[i] | number : "1.0-2" }}m/s
+          <br />
+          Wind Gust: {{ Day_Avg_Wind_Gust[i] | number : "1.0-2" }}m/s
+        </div>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <mat-expansion-panel *ngFor="let X of FiveDay[i]; let j = index">
+      <mat-expansion-panel-header
+        [collapsedHeight]="'120px'"
+        [expandedHeight]="'300px'"
+      >
+        <mat-panel-description *ngIf="FiveDay[i][i]">
+          <table class="table table-hover">
+            <tbody>
+              <tr>
+                <td id="MatExpansionPanel_Table_Time">
+                  {{ FiveDay[i][j].Date_Time_Txt | date : "hh:mm a" }}
+                  <br />
+                  {{ FiveDay[i][j].Main_Temperature | number : "1.0-2" }}°C
+                  <!-- {{ FiveDay[i][j].Date_Time_Txt | date : "dd" }} -->
+                </td>
+                <td id="MatExpansionPanel_Table_Temperature">
+                  <img
+                    mat-card-sm-image
+                    src="{{ FiveDay[i][j].Weather_Icon }}"
+                    alt="Responsive image"
+                    id="MatCardDescription"
+                  />
+                  <br />
+                  {{ FiveDay[i][j].Weather_Description }}
+                </td>
+                <td id="MatExpansionPanel_Table_Value">
+                  Max:
+                  {{ FiveDay[i][j].Main_Temperature_Max | number : "1.0-2" }}°C
+                  <br />
+                  Min:
+                  {{ FiveDay[i][j].Main_Temperature_Min | number : "1.0-2" }}°C
+                  <br />
+                  Feels Like:
+                  {{ FiveDay[i][j].Main_Feels_Like | number : "1.0-2" }}°C
+                </td>
+                <td id="MatExpansionPanel_Table_Value">
+                  Humidity:
+                  {{ FiveDay[i][j].Main_Humidity | number : "1.0-2" }}%
+                  <br />
+                  Wind:
+                  {{ FiveDay[i][j].Wind_Speed | number : "1.0-2" }}m/s |
+                  {{ FiveDay[i][j].Wind_Degrees | number : "1.0-2" }}°
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <table class="table table-hover" id="MatExpansionPanel_Table_Expand">
+        <tbody>
+          <tr>
+            <td id="MatExpansionPanel_Table_Value">
+              Pressure:
+              {{ FiveDay[i][j].Main_Pressure | number : "1.0-2" }}hPa
+            </td>
+            <td id="MatExpansionPanel_Table_Value">
+              Visibility:
+              {{ FiveDay[i][j].Visibility | number : "1.0-2" }} Meter
+            </td>
+            <td id="MatExpansionPanel_Table_Value">
+              Probability Precipitation:
+              {{ FiveDay[i][j].Probability_Precipitation | number : "1.0-2" }}%
+            </td>
+            <td id="MatExpansionPanel_Table_Value">
+              Wind Gust:
+              {{ FiveDay[i][j].Wind_Gust | number : "1.0-2" }}m/s
+            </td>
+            <td id="MatExpansionPanel_Table_Value">
+              Cloudness:
+              {{ FiveDay[i][j].Clouds | number : "1.0-2" }}%
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </mat-expansion-panel>
+  </mat-expansion-panel>
+</div>
+<h1 id="web" style="padding-top: 5%">
+  <a
+    href="https://www.freepik.com/free-photo/3d-rendering-planet-earth_44957889.htm#fromView=search&page=1&position=2&uuid=cd17fb40-25f7-49d9-9435-bd32c1544717"
+    >Image by freepik</a
+  >
+</h1>

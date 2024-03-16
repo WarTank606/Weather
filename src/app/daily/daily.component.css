@@ -1,0 +1,122 @@
+/* Site-Wide */
+mat-expansion-panel {
+  padding-top: 10px;
+  color:white;
+  background-color: rgba(0, 0, 0, 0.6);
+  /* border: 1px solid lightslategray; */
+  text-align: center;
+  justify-content: center;
+  cursor: pointer;
+  vertical-align: middle;
+  height: auto;
+}
+mat-expansion-panel-header {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.8cqb;
+  height: auto;
+}
+mat-expansion-panel-header {
+  background: transparent !important;
+}
+img {
+  height: 70px;
+  width: 70px;
+}
+table
+{
+  text-align: left;
+  font-size: 1.8cqb;
+  font-family: 'Times New Roman', Times, serif;
+  border: none;
+  color:deepskyblue;
+  background-color: rgba(0, 191, 255, 0.4); 
+  border: none;
+  /* padding: 0%; */
+}
+table:hover
+{
+  text-align: left;
+  font-size: 1.8cqb;
+  font-family: 'Times New Roman', Times, serif;
+  border: none;
+  color: black;
+  border: 1px white;
+}
+/* Site-Wide */
+
+
+#MatExpansionPanel_Table_Time
+{
+  font-size: 2.5cqb;
+  text-align: center;
+  vertical-align: middle;
+  border: none;  
+}
+#MatExpansionPanel_Table_Value
+{
+  text-align: center;
+  vertical-align: middle;
+  border: none;  
+}
+
+#MatExpansionPanel_Table_Temperature
+{
+  text-align: center;  
+  border: none; 
+}
+#MatExpansionPanel_Table_Expand
+{
+  border: 1px white;
+  color: orange;
+  background-color: rgba(255, 165, 0, 0.4); 
+}
+#MatExpansionPanel_Dates {
+color: white;
+font-size: 3cqb;
+padding-bottom: 5px;
+padding-top: 5px;
+text-align: left;
+}
+#MatExpansionPanel_Title {
+  color:orchid;
+  background-color: rgba(0, 0, 0, 0.9); 
+font-size: 4cqb;
+padding-bottom: 15px;
+padding-top: 5px;
+text-align: left;
+}
+#MatExpansionPanel_Value {
+ color: white;
+ text-align: left;
+}
+#MatExpansionPanel_Average {
+  vertical-align: middle;
+  text-align: center;
+  font-size: 4cqb;
+  color: white;
+}
+#MatExpansionPanel_AverageLabel {
+  font-size: 1.8cqb;
+}
+/* Mat-Expansion-Panel */
+#web
+{
+    bottom: 5px;
+}
+#SearchBar_Button {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: rgb(255, 241, 214);
+  background-color: rgba(255, 165, 0, 0.6);
+  border: 2px solid white;
+  margin-bottom: 2%;
+  text-align: center;
+}
+
+
+.ChangeCity
+{
+  text-align: center;
+
+}

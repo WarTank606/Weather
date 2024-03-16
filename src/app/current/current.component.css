@@ -1,0 +1,69 @@
+/* Site-Wide */
+th {
+    text-align: center;
+  }
+  
+  table {
+    padding-top: 200px;
+  }
+  Mat-Card {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding-top: 10px;
+  }
+  /* Site-Wide */
+
+/* Mat-Card-Search-Results */
+#MatCardSearchResults 
+{
+  font-family: "Times New Roman", Times, serif;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  font-size: 1.8cqb;
+}
+#MatCardSearchResults_Title
+{
+  font-size: 3cqb;
+  padding-bottom: 10px;
+}
+#MatCardSearchResults_Table
+{
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+#MatCardSearchResults_Value 
+{
+  vertical-align: middle;
+  border: none;
+}
+#MatCardSearchResults_Value:hover 
+{
+  background-color: transparent;
+}
+#MatCardSearchResults_Current {
+  font-size: 60px;
+}
+
+#MatCardSearchResults_CurrentName
+{
+  font-size: 1.8cqb;
+}
+
+
+/* Mat-Card-Search-Results */
+#web
+{
+    position: fixed;
+    bottom: 5px;
+}
+
+#SearchBar_Button {
+  font-weight: bold;
+  font-size: 20px;
+  color: rgb(255, 241, 214);
+  background-color: rgba(255, 165, 0, 0.6);
+  border: 2px solid white;
+}

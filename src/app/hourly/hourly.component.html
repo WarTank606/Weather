@@ -1,0 +1,78 @@
+<!-- Mat-Card-Search-Results-Hourly -->
+<mat-card id="MatCardSearchResultsHourly">
+  <mat-card-header>
+    <mat-card-title id="MatCardSearchResultsHourly_Title"
+      >Hourly Forecast</mat-card-title
+    >
+  </mat-card-header>
+  <mat-card-content>
+    <table class="table table-hover" id="MatCardSearchResultsHourly_Table">
+      
+      
+      <thead>
+        <tr>
+          <th>Time</th>
+          <th>Temperature</th>
+          <th>
+            <button type="submit" class="btn success" id="SearchBar_Button" (click)="ChangeCity()">
+              Change City: {{CityName}} | {{StateName}} | {{CountryName}}
+          </button>
+          <br>
+          <br>
+          Weather</th>
+          <th>Wind Speed</th>
+          <th>Atmosphere</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr id="MatCardSearchResultsHourly_Temp" *ngFor="let X of Eighthours">
+          <th id="MatCardSearchResultsHourly_Temp">
+            {{ X.Date_Time_Txt | date : "EEEE, d" }}
+            <br />
+            {{ X.Date_Time_Txt | date : "hh:mm a" }}
+          </th>
+
+          <td id="MatCardSearchResultsHourly_Temp">
+            {{ X.Main_Temperature | number : "1.0-2" }}°C
+            <br />
+            Feels Like: {{ X.Main_Feels_Like | number : "1.0-2" }}°C
+          </td>
+
+          <td id="MatCardSearchResultsHourly_Temp">
+            <img
+              mat-card-sm-image
+              src="{{ X.Weather_Icon }}"
+              alt="Responsive image"
+              id="MatCardDescription"
+            />
+            <br />
+            {{ X.Weather_Description }}
+          </td>
+
+          <td id="MatCardSearchResultsHourly_Temp">
+            Wind Speed: {{ X.Wind_Speed | number : "1.0-2" }}m/s
+          </td>
+
+          <th id="MatCardSearchResultsHourly_Temp">
+            Humidity:
+            {{ X.Main_Humidity | number : "1.0-2" }}%
+            <br />
+            Pressure:
+            {{ X.Main_Pressure | number : "1.0-2" }}hPa
+            <br />
+            Cloudness:
+            {{ X.Clouds | number : "1.0-2" }}%
+            <br />
+            Probability of Precipitation:
+            {{ X.Probability_Precipitation | number : "1.0-2" }}%
+          </th>
+        </tr>
+      </tbody>
+    </table>
+  </mat-card-content>
+</mat-card>
+<!-- Mat-Card-Search-Results-Hourly -->
+
+<h1 id = "web" style="padding-top: 5%;">
+  <a href="https://www.freepik.com/free-photo/3d-rendering-planet-earth_44957889.htm#fromView=search&page=1&position=2&uuid=cd17fb40-25f7-49d9-9435-bd32c1544717">Image by freepik</a>
+</h1>
